@@ -15,11 +15,14 @@ export default function Navbar({ profile }: { profile: Profile | null }) {
     router.refresh()
   }
 
-  const links = [
-    { href: '/score', label: 'ให้คะแนน' },
-    ...(profile?.role === 'super_admin' ? [{ href: '/admin', label: 'จัดการระบบ' }] : []),
-    { href: '/leaderboard', label: '🏆 Leaderboard' },
-  ]
+  const navItems = [
+  { href: '/score', label: 'ให้คะแนน' },
+  { href: '/leaderboard', label: 'Leaderboard' },
+
+  ...(profile?.role === 'super_admin'
+    ? [{ href: '/admin', label: 'จัดการระบบ' }]
+    : [])
+]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 h-14 flex items-center px-4 gap-2"
