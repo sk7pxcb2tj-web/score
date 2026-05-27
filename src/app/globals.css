@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #e8b84b;
+  --gold-dim: #8a6a22;
+  --gold-glow: rgba(232,184,75,0.12);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'Kanit', sans-serif;
+  background: #0a0a0f;
+  color: #f0ede8;
+}
+
+.mono { font-family: 'IBM Plex Mono', monospace; }
+
+input, select, textarea {
+  font-family: 'Kanit', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #12121a; }
+::-webkit-scrollbar-thumb { background: #22222e; border-radius: 3px; }
